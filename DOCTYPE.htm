@@ -1,0 +1,572 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 3.0cm 70.85pt 3.0cm;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=PT-BR>
+
+<div class=WordSection1>
+
+<p class=MsoNormal>&lt;!DOCTYPE html&gt;</p>
+
+<p class=MsoNormal>&lt;html lang=&quot;pt-BR&quot;&gt;</p>
+
+<p class=MsoNormal>&lt;head&gt;</p>
+
+<p class=MsoNormal>  &lt;meta charset=&quot;UTF-8&quot;&gt;</p>
+
+<p class=MsoNormal>  &lt;title&gt;Ficha de Personagem – Requiem
+RPG&lt;/title&gt;</p>
+
+<p class=MsoNormal>  &lt;!-- Inclusão do jsPDF via CDN --&gt;</p>
+
+<p class=MsoNormal>  &lt;script
+src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js&quot;&gt;&lt;/script&gt;</p>
+
+<p class=MsoNormal>  &lt;style&gt;</p>
+
+<p class=MsoNormal>    body { font-family: Arial, sans-serif; margin: 20px; }</p>
+
+<p class=MsoNormal>    fieldset { margin-bottom: 20px; padding: 10px; }</p>
+
+<p class=MsoNormal>    label { display: inline-block; width: 200px;
+vertical-align: top; }</p>
+
+<p class=MsoNormal>    input[type=&quot;text&quot;],
+input[type=&quot;number&quot;], textarea { width: 300px; }</p>
+
+<p class=MsoNormal>    textarea { resize: vertical; }</p>
+
+<p class=MsoNormal>  &lt;/style&gt;</p>
+
+<p class=MsoNormal>&lt;/head&gt;</p>
+
+<p class=MsoNormal>&lt;body&gt;</p>
+
+<p class=MsoNormal>  &lt;h1&gt;Ficha de Personagem – Requiem RPG&lt;/h1&gt;</p>
+
+<p class=MsoNormal>  &lt;form id=&quot;characterForm&quot;&gt;</p>
+
+<p class=MsoNormal>    &lt;!-- 1. IDENTIFICAÇÃO --&gt;</p>
+
+<p class=MsoNormal>    &lt;fieldset&gt;</p>
+
+<p class=MsoNormal>      &lt;legend&gt;1. IDENTIFICAÇÃO&lt;/legend&gt;</p>
+
+<p class=MsoNormal>      &lt;label for=&quot;nome&quot;&gt;Nome do
+Personagem:&lt;/label&gt;</p>
+
+<p class=MsoNormal>      &lt;input type=&quot;text&quot; id=&quot;nome&quot;
+name=&quot;nome&quot; required&gt;&lt;br&gt;&lt;br&gt;</p>
+
+<p class=MsoNormal>      &lt;label
+for=&quot;jogador&quot;&gt;Jogador:&lt;/label&gt;</p>
+
+<p class=MsoNormal>      &lt;input type=&quot;text&quot; id=&quot;jogador&quot;
+name=&quot;jogador&quot; required&gt;&lt;br&gt;&lt;br&gt;</p>
+
+<p class=MsoNormal>      &lt;p&gt;Relíquia Inicial:&lt;/p&gt;</p>
+
+<p class=MsoNormal>      &lt;input type=&quot;checkbox&quot;
+id=&quot;grimorio&quot; name=&quot;reliquia&quot;
+value=&quot;Grimório&quot;&gt;</p>
+
+<p class=MsoNormal>      &lt;label
+for=&quot;grimorio&quot;&gt;Grimório&lt;/label&gt;</p>
+
+<p class=MsoNormal>      &lt;input type=&quot;checkbox&quot;
+id=&quot;simbolo&quot; name=&quot;reliquia&quot; value=&quot;Símbolo
+Sagrado&quot;&gt;</p>
+
+<p class=MsoNormal>      &lt;label for=&quot;simbolo&quot;&gt;Símbolo
+Sagrado&lt;/label&gt;</p>
+
+<p class=MsoNormal>      &lt;input type=&quot;checkbox&quot;
+id=&quot;mascara&quot; name=&quot;reliquia&quot; value=&quot;Máscara
+Oni&quot;&gt;</p>
+
+<p class=MsoNormal>      &lt;label for=&quot;mascara&quot;&gt;Máscara
+Oni&lt;/label&gt;&lt;br&gt;</p>
+
+<p class=MsoNormal>      &lt;input type=&quot;checkbox&quot;
+id=&quot;manoplas&quot; name=&quot;reliquia&quot; value=&quot;Manoplas do
+Gigante&quot;&gt;</p>
+
+<p class=MsoNormal>      &lt;label for=&quot;manoplas&quot;&gt;Manoplas do
+Gigante&lt;/label&gt;</p>
+
+<p class=MsoNormal>      &lt;input type=&quot;checkbox&quot;
+id=&quot;botas&quot; name=&quot;reliquia&quot; value=&quot;Botas de
+Hermes&quot;&gt;</p>
+
+<p class=MsoNormal>      &lt;label for=&quot;botas&quot;&gt;Botas de
+Hermes&lt;/label&gt;&lt;br&gt;</p>
+
+<p class=MsoNormal>      &lt;input type=&quot;checkbox&quot;
+id=&quot;olho&quot; name=&quot;reliquia&quot; value=&quot;Olho do
+Oráculo&quot;&gt;</p>
+
+<p class=MsoNormal>      &lt;label for=&quot;olho&quot;&gt;Olho do
+Oráculo&lt;/label&gt;</p>
+
+<p class=MsoNormal>      &lt;input type=&quot;checkbox&quot;
+id=&quot;colar&quot; name=&quot;reliquia&quot; value=&quot;Colar do
+Berserker&quot;&gt;</p>
+
+<p class=MsoNormal>      &lt;label for=&quot;colar&quot;&gt;Colar do
+Berserker&lt;/label&gt;</p>
+
+<p class=MsoNormal>    &lt;/fieldset&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    &lt;!-- 2. ATRIBUTOS --&gt;</p>
+
+<p class=MsoNormal>    &lt;fieldset&gt;</p>
+
+<p class=MsoNormal>      &lt;legend&gt;2. ATRIBUTOS (Distribua 15 pontos –
+máximo de 5 pontos por atributo)&lt;/legend&gt;</p>
+
+<p class=MsoNormal>      &lt;label
+for=&quot;vigor&quot;&gt;Vigor:&lt;/label&gt;</p>
+
+<p class=MsoNormal>      &lt;input type=&quot;number&quot; id=&quot;vigor&quot;
+name=&quot;vigor&quot; min=&quot;0&quot; max=&quot;5&quot;
+required&gt;&lt;br&gt;&lt;br&gt;</p>
+
+<p class=MsoNormal>      &lt;label
+for=&quot;destreza&quot;&gt;Destreza:&lt;/label&gt;</p>
+
+<p class=MsoNormal>      &lt;input type=&quot;number&quot; id=&quot;destreza&quot;
+name=&quot;destreza&quot; min=&quot;0&quot; max=&quot;5&quot;
+required&gt;&lt;br&gt;&lt;br&gt;</p>
+
+<p class=MsoNormal>      &lt;label
+for=&quot;forca&quot;&gt;Força:&lt;/label&gt;</p>
+
+<p class=MsoNormal>      &lt;input type=&quot;number&quot; id=&quot;forca&quot;
+name=&quot;forca&quot; min=&quot;0&quot; max=&quot;5&quot;
+required&gt;&lt;br&gt;&lt;br&gt;</p>
+
+<p class=MsoNormal>      &lt;label
+for=&quot;arcana&quot;&gt;Arcana:&lt;/label&gt;</p>
+
+<p class=MsoNormal>      &lt;input type=&quot;number&quot; id=&quot;arcana&quot;
+name=&quot;arcana&quot; min=&quot;0&quot; max=&quot;5&quot;
+required&gt;&lt;br&gt;&lt;br&gt;</p>
+
+<p class=MsoNormal>      &lt;label
+for=&quot;perseveranca&quot;&gt;Perseverança:&lt;/label&gt;</p>
+
+<p class=MsoNormal>      &lt;input type=&quot;number&quot;
+id=&quot;perseveranca&quot; name=&quot;perseveranca&quot; min=&quot;0&quot;
+max=&quot;5&quot; required&gt;&lt;br&gt;&lt;br&gt;</p>
+
+<p class=MsoNormal>      &lt;label for=&quot;fe&quot;&gt;Fé:&lt;/label&gt;</p>
+
+<p class=MsoNormal>      &lt;input type=&quot;number&quot; id=&quot;fe&quot;
+name=&quot;fe&quot; min=&quot;0&quot; max=&quot;5&quot; required&gt;</p>
+
+<p class=MsoNormal>    &lt;/fieldset&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    &lt;!-- 3. CÁLCULOS DERIVADOS --&gt;</p>
+
+<p class=MsoNormal>    &lt;fieldset&gt;</p>
+
+<p class=MsoNormal>      &lt;legend&gt;3. CÁLCULOS DERIVADOS&lt;/legend&gt;</p>
+
+<p class=MsoNormal>      &lt;label for=&quot;hp&quot;&gt;HP:&lt;/label&gt;</p>
+
+<p class=MsoNormal>      &lt;input type=&quot;text&quot; id=&quot;hp&quot;
+name=&quot;hp&quot;&gt;&lt;br&gt;&lt;br&gt;</p>
+
+<p class=MsoNormal>      &lt;label for=&quot;st&quot;&gt;Stamina
+(ST):&lt;/label&gt;</p>
+
+<p class=MsoNormal>      &lt;input type=&quot;text&quot; id=&quot;st&quot;
+name=&quot;st&quot;&gt;&lt;br&gt;&lt;br&gt;</p>
+
+<p class=MsoNormal>      &lt;label for=&quot;mana&quot;&gt;Mana:&lt;/label&gt;</p>
+
+<p class=MsoNormal>      &lt;input type=&quot;text&quot; id=&quot;mana&quot;
+name=&quot;mana&quot;&gt;&lt;br&gt;&lt;br&gt;</p>
+
+<p class=MsoNormal>      &lt;label for=&quot;reflexo&quot;&gt;Reflexo
+(RE):&lt;/label&gt;</p>
+
+<p class=MsoNormal>      &lt;input type=&quot;text&quot; id=&quot;reflexo&quot;
+name=&quot;reflexo&quot;&gt;</p>
+
+<p class=MsoNormal>    &lt;/fieldset&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    &lt;!-- 4. EQUIPAMENTOS --&gt;</p>
+
+<p class=MsoNormal>    &lt;fieldset&gt;</p>
+
+<p class=MsoNormal>      &lt;legend&gt;4. EQUIPAMENTOS (Cada personagem inicia
+com 10 Pontos de Equipamento – PE)&lt;/legend&gt;</p>
+
+<p class=MsoNormal>      &lt;label
+for=&quot;armas&quot;&gt;Armas:&lt;/label&gt;</p>
+
+<p class=MsoNormal>      &lt;input type=&quot;text&quot; id=&quot;armas&quot;
+name=&quot;armas&quot;&gt;&lt;br&gt;&lt;br&gt;</p>
+
+<p class=MsoNormal>      &lt;label
+for=&quot;escudo&quot;&gt;Escudo:&lt;/label&gt;</p>
+
+<p class=MsoNormal>      &lt;input type=&quot;text&quot; id=&quot;escudo&quot;
+name=&quot;escudo&quot;&gt;&lt;br&gt;&lt;br&gt;</p>
+
+<p class=MsoNormal>      &lt;label
+for=&quot;armadura&quot;&gt;Armadura:&lt;/label&gt;</p>
+
+<p class=MsoNormal>      &lt;input type=&quot;text&quot;
+id=&quot;armadura&quot; name=&quot;armadura&quot;&gt;&lt;br&gt;&lt;br&gt;</p>
+
+<p class=MsoNormal>      &lt;label for=&quot;outros&quot;&gt;Outros
+Itens:&lt;/label&gt;</p>
+
+<p class=MsoNormal>      &lt;input type=&quot;text&quot; id=&quot;outros&quot;
+name=&quot;outros&quot;&gt;</p>
+
+<p class=MsoNormal>    &lt;/fieldset&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    &lt;!-- 5. MAGIAS --&gt;</p>
+
+<p class=MsoNormal>    &lt;fieldset&gt;</p>
+
+<p class=MsoNormal>      &lt;legend&gt;5. MAGIAS (Se aplicável – para
+personagens com Grimório ou Símbolo Sagrado)&lt;/legend&gt;</p>
+
+<p class=MsoNormal>      &lt;label for=&quot;magiasConhecidas&quot;&gt;Magias
+Conhecidas:&lt;/label&gt;&lt;br&gt;</p>
+
+<p class=MsoNormal>      &lt;textarea id=&quot;magiasConhecidas&quot;
+name=&quot;magiasConhecidas&quot; rows=&quot;4&quot;
+cols=&quot;50&quot;&gt;&lt;/textarea&gt;&lt;br&gt;&lt;br&gt;</p>
+
+<p class=MsoNormal>      &lt;label for=&quot;magiasMemorizadas&quot;&gt;Magias
+Memorizadas:&lt;/label&gt;&lt;br&gt;</p>
+
+<p class=MsoNormal>      &lt;textarea id=&quot;magiasMemorizadas&quot;
+name=&quot;magiasMemorizadas&quot; rows=&quot;4&quot;
+cols=&quot;50&quot;&gt;&lt;/textarea&gt;</p>
+
+<p class=MsoNormal>    &lt;/fieldset&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    &lt;!-- 6. ASPECTOS --&gt;</p>
+
+<p class=MsoNormal>    &lt;fieldset&gt;</p>
+
+<p class=MsoNormal>      &lt;legend&gt;6. ASPECTOS&lt;/legend&gt;</p>
+
+<p class=MsoNormal>      &lt;label
+for=&quot;aspectosPositivos&quot;&gt;Aspectos Positivos (mínimo
+6):&lt;/label&gt;&lt;br&gt;</p>
+
+<p class=MsoNormal>      &lt;textarea id=&quot;aspectosPositivos&quot;
+name=&quot;aspectosPositivos&quot; rows=&quot;4&quot;
+cols=&quot;50&quot;&gt;&lt;/textarea&gt;&lt;br&gt;&lt;br&gt;</p>
+
+<p class=MsoNormal>      &lt;label
+for=&quot;aspectosNegativos&quot;&gt;Aspectos Negativos (mínimo 2):&lt;/label&gt;&lt;br&gt;</p>
+
+<p class=MsoNormal>      &lt;textarea id=&quot;aspectosNegativos&quot;
+name=&quot;aspectosNegativos&quot; rows=&quot;4&quot;
+cols=&quot;50&quot;&gt;&lt;/textarea&gt;</p>
+
+<p class=MsoNormal>    &lt;/fieldset&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    &lt;!-- 7. OBSERVAÇÕES ADICIONAIS --&gt;</p>
+
+<p class=MsoNormal>    &lt;fieldset&gt;</p>
+
+<p class=MsoNormal>      &lt;legend&gt;7. OBSERVAÇÕES ADICIONAIS&lt;/legend&gt;</p>
+
+<p class=MsoNormal>      &lt;label for=&quot;observacoes&quot;&gt;Notas sobre a
+história, personalidade ou evolução do personagem:&lt;/label&gt;&lt;br&gt;</p>
+
+<p class=MsoNormal>      &lt;textarea id=&quot;observacoes&quot;
+name=&quot;observacoes&quot; rows=&quot;4&quot;
+cols=&quot;50&quot;&gt;&lt;/textarea&gt;</p>
+
+<p class=MsoNormal>    &lt;/fieldset&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    &lt;button type=&quot;button&quot;
+onclick=&quot;generatePDF()&quot;&gt;Gerar PDF&lt;/button&gt;</p>
+
+<p class=MsoNormal>  &lt;/form&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>  &lt;script&gt;</p>
+
+<p class=MsoNormal>    async function generatePDF() {</p>
+
+<p class=MsoNormal>      const { jsPDF } = window.jspdf;</p>
+
+<p class=MsoNormal>      const doc = new jsPDF();</p>
+
+<p class=MsoNormal>      let y = 10;</p>
+
+<p class=MsoNormal>      </p>
+
+<p class=MsoNormal>      // Função auxiliar para adicionar texto com
+espaçamento</p>
+
+<p class=MsoNormal>      function addText(text) {</p>
+
+<p class=MsoNormal>        doc.text(text, 10, y);</p>
+
+<p class=MsoNormal>        y += 10;</p>
+
+<p class=MsoNormal>      }</p>
+
+<p class=MsoNormal>      </p>
+
+<p class=MsoNormal>      // Cabeçalho</p>
+
+<p class=MsoNormal>      addText(&quot;Ficha de Personagem – Requiem
+RPG&quot;);</p>
+
+<p class=MsoNormal>      addText(&quot; &quot;);</p>
+
+<p class=MsoNormal>      </p>
+
+<p class=MsoNormal>      // 1. Identificação</p>
+
+<p class=MsoNormal>      addText(&quot;1. IDENTIFICAÇÃO&quot;);</p>
+
+<p class=MsoNormal>      const nome = document.getElementById(&quot;nome&quot;).value;</p>
+
+<p class=MsoNormal>      const jogador =
+document.getElementById(&quot;jogador&quot;).value;</p>
+
+<p class=MsoNormal>      addText(&quot;Nome do Personagem: &quot; + nome);</p>
+
+<p class=MsoNormal>      addText(&quot;Jogador: &quot; + jogador);</p>
+
+<p class=MsoNormal>      </p>
+
+<p class=MsoNormal>      let reliquias = [];</p>
+
+<p class=MsoNormal>      document.querySelectorAll(&quot;input[name='reliquia']:checked&quot;).forEach((el)
+=&gt; {</p>
+
+<p class=MsoNormal>        reliquias.push(el.value);</p>
+
+<p class=MsoNormal>      });</p>
+
+<p class=MsoNormal>      addText(&quot;Relíquia Inicial: &quot; +
+reliquias.join(&quot;, &quot;));</p>
+
+<p class=MsoNormal>      addText(&quot; &quot;);</p>
+
+<p class=MsoNormal>      </p>
+
+<p class=MsoNormal>      // 2. Atributos</p>
+
+<p class=MsoNormal>      addText(&quot;2. ATRIBUTOS&quot;);</p>
+
+<p class=MsoNormal>      const vigor = document.getElementById(&quot;vigor&quot;).value;</p>
+
+<p class=MsoNormal>      const destreza =
+document.getElementById(&quot;destreza&quot;).value;</p>
+
+<p class=MsoNormal>      const forca =
+document.getElementById(&quot;forca&quot;).value;</p>
+
+<p class=MsoNormal>      const arcana =
+document.getElementById(&quot;arcana&quot;).value;</p>
+
+<p class=MsoNormal>      const perseveranca =
+document.getElementById(&quot;perseveranca&quot;).value;</p>
+
+<p class=MsoNormal>      const fe =
+document.getElementById(&quot;fe&quot;).value;</p>
+
+<p class=MsoNormal>      addText(&quot;Vigor: &quot; + vigor);</p>
+
+<p class=MsoNormal>      addText(&quot;Destreza: &quot; + destreza);</p>
+
+<p class=MsoNormal>      addText(&quot;Força: &quot; + forca);</p>
+
+<p class=MsoNormal>      addText(&quot;Arcana: &quot; + arcana);</p>
+
+<p class=MsoNormal>      addText(&quot;Perseverança: &quot; + perseveranca);</p>
+
+<p class=MsoNormal>      addText(&quot;Fé: &quot; + fe);</p>
+
+<p class=MsoNormal>      addText(&quot; &quot;);</p>
+
+<p class=MsoNormal>      </p>
+
+<p class=MsoNormal>      // 3. Cálculos Derivados</p>
+
+<p class=MsoNormal>      addText(&quot;3. CÁLCULOS DERIVADOS&quot;);</p>
+
+<p class=MsoNormal>      const hp =
+document.getElementById(&quot;hp&quot;).value;</p>
+
+<p class=MsoNormal>      const st =
+document.getElementById(&quot;st&quot;).value;</p>
+
+<p class=MsoNormal>      const mana =
+document.getElementById(&quot;mana&quot;).value;</p>
+
+<p class=MsoNormal>      const reflexo =
+document.getElementById(&quot;reflexo&quot;).value;</p>
+
+<p class=MsoNormal>      addText(&quot;HP: &quot; + hp);</p>
+
+<p class=MsoNormal>      addText(&quot;Stamina (ST): &quot; + st);</p>
+
+<p class=MsoNormal>      addText(&quot;Mana: &quot; + mana);</p>
+
+<p class=MsoNormal>      addText(&quot;Reflexo (RE): &quot; + reflexo);</p>
+
+<p class=MsoNormal>      addText(&quot; &quot;);</p>
+
+<p class=MsoNormal>      </p>
+
+<p class=MsoNormal>      // 4. Equipamentos</p>
+
+<p class=MsoNormal>      addText(&quot;4. EQUIPAMENTOS&quot;);</p>
+
+<p class=MsoNormal>      const armas =
+document.getElementById(&quot;armas&quot;).value;</p>
+
+<p class=MsoNormal>      const escudo =
+document.getElementById(&quot;escudo&quot;).value;</p>
+
+<p class=MsoNormal>      const armadura =
+document.getElementById(&quot;armadura&quot;).value;</p>
+
+<p class=MsoNormal>      const outros =
+document.getElementById(&quot;outros&quot;).value;</p>
+
+<p class=MsoNormal>      addText(&quot;Armas: &quot; + armas);</p>
+
+<p class=MsoNormal>      addText(&quot;Escudo: &quot; + escudo);</p>
+
+<p class=MsoNormal>      addText(&quot;Armadura: &quot; + armadura);</p>
+
+<p class=MsoNormal>      addText(&quot;Outros Itens: &quot; + outros);</p>
+
+<p class=MsoNormal>      addText(&quot; &quot;);</p>
+
+<p class=MsoNormal>      </p>
+
+<p class=MsoNormal>      // 5. Magias</p>
+
+<p class=MsoNormal>      addText(&quot;5. MAGIAS&quot;);</p>
+
+<p class=MsoNormal>      const magiasConhecidas =
+document.getElementById(&quot;magiasConhecidas&quot;).value;</p>
+
+<p class=MsoNormal>      const magiasMemorizadas =
+document.getElementById(&quot;magiasMemorizadas&quot;).value;</p>
+
+<p class=MsoNormal>      addText(&quot;Magias Conhecidas: &quot; +
+magiasConhecidas);</p>
+
+<p class=MsoNormal>      addText(&quot;Magias Memorizadas: &quot; +
+magiasMemorizadas);</p>
+
+<p class=MsoNormal>      addText(&quot; &quot;);</p>
+
+<p class=MsoNormal>      </p>
+
+<p class=MsoNormal>      // 6. Aspectos</p>
+
+<p class=MsoNormal>      addText(&quot;6. ASPECTOS&quot;);</p>
+
+<p class=MsoNormal>      const aspectosPositivos = document.getElementById(&quot;aspectosPositivos&quot;).value;</p>
+
+<p class=MsoNormal>      const aspectosNegativos =
+document.getElementById(&quot;aspectosNegativos&quot;).value;</p>
+
+<p class=MsoNormal>      addText(&quot;Aspectos Positivos: &quot; +
+aspectosPositivos);</p>
+
+<p class=MsoNormal>      addText(&quot;Aspectos Negativos: &quot; +
+aspectosNegativos);</p>
+
+<p class=MsoNormal>      addText(&quot; &quot;);</p>
+
+<p class=MsoNormal>      </p>
+
+<p class=MsoNormal>      // 7. Observações Adicionais</p>
+
+<p class=MsoNormal>      addText(&quot;7. OBSERVAÇÕES ADICIONAIS&quot;);</p>
+
+<p class=MsoNormal>      const observacoes =
+document.getElementById(&quot;observacoes&quot;).value;</p>
+
+<p class=MsoNormal>      addText(observacoes);</p>
+
+<p class=MsoNormal>      </p>
+
+<p class=MsoNormal>      // Salva o PDF</p>
+
+<p class=MsoNormal>      doc.save(&quot;ficha_personagem.pdf&quot;);</p>
+
+<p class=MsoNormal>    }</p>
+
+<p class=MsoNormal>  &lt;/script&gt;</p>
+
+<p class=MsoNormal>&lt;/body&gt;</p>
+
+<p class=MsoNormal>&lt;/html&gt;</p>
+
+</div>
+
+</body>
+
+</html>
